@@ -1,0 +1,223 @@
+:root {
+    --bg-crema: #faf8f5;
+    --card-bg: #ffffff;
+    --azul-soft: #4a6b82;
+    --dorado-sutil: #c5a059;
+    --texto: #333333;
+    --borde-marco: #e2d1b0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Transición suave para todos los saltos de sección */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-crema);
+    color: var(--texto);
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Secciones adaptables con dvh para evitar problemas con la barra de navegación del cel */
+.section-card {
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100%;
+    max-width: 500px; /* Ancho ideal tipo invitación de cel */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.frame-border {
+    border: 2px solid var(--borde-marco);
+    border-radius: 12px;
+    padding: 35px 20px;
+    text-align: center;
+    width: 100%;
+    background: var(--card-bg);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+}
+
+.symbol {
+    font-size: 2.2rem;
+    color: var(--dorado-sutil);
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.1rem;
+    color: var(--azul-soft);
+    margin-bottom: 10px;
+}
+
+.names-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    min-height: 2.5rem; /* Evita que el contenedor brinque mientras escribe el JS */
+}
+
+#typing-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    color: var(--dorado-sutil);
+    font-style: italic;
+}
+
+.cursor {
+    font-size: 2rem;
+    color: var(--dorado-sutil);
+    animation: blink 0.8s infinite;
+    margin-left: 3px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.subtext {
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+.card-content {
+    background: var(--card-bg);
+    border: 1px solid var(--borde-marco);
+    border-radius: 12px;
+    padding: 30px 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+}
+
+.badge {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dorado-sutil);
+    display: block;
+    margin-bottom: 20px;
+}
+
+.family-block {
+    margin-bottom: 20px;
+}
+
+.family-block h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--azul-soft);
+    margin-bottom: 5px;
+}
+
+.family-block p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+.date-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem;
+    color: var(--azul-soft);
+    margin-bottom: 20px;
+}
+
+.location-card {
+    background: #fcfbfa;
+    border: 1px dashed var(--borde-marco);
+    border-radius: 8px;
+    padding: 18px 15px;
+    margin-bottom: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.location-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.loc-icon {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.location-card h3 {
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    color: var(--azul-soft);
+}
+
+.time {
+    font-weight: 500;
+    color: var(--dorado-sutil);
+    margin: 4px 0;
+}
+
+.place-name {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    color: #666;
+    line-height: 1.3;
+}
+
+.map-btn {
+    display: inline-block;
+    padding: 8px 22px;
+    border: 1px solid var(--azul-soft);
+    color: var(--azul-soft);
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.map-btn:hover {
+    background: var(--azul-soft);
+    color: white;
+}
+
+.gold-btn {
+    margin-top: 15px;
+    padding: 12px 30px;
+    background: var(--dorado-sutil);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(197, 160, 89, 0.3);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.gold-btn:hover {
+    transform: scale(1.03);
+    background-color: #b38e4a;
+}
+
+.final-msg {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    color: var(--azul-soft);
+    font-style: italic;
+    margin-bottom: 15px;
+}

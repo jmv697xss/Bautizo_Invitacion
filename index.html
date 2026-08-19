@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Primera Comunión - Daniel y Angel Said</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fuentes elegantes y sobrias -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- PORTADA DE ENTRADA -->
+    <section class="section-card intro-section">
+        <div class="frame-border">
+            <p class="symbol">✝︎</p>
+            <h1>Nuestra Primera Comunión</h1>
+            <div class="names-wrapper">
+                <h2 id="typing-text"></h2><span class="cursor">|</span>
+            </div>
+            <p class="subtext">Una fecha sagrada para compartir en familia.</p>
+            <button id="btn-scroll" class="gold-btn">Ver invitación</button>
+        </div>
+    </section>
+
+    <!-- FAMILIA Y PADRINOS (AHORA TIENE ID PARA DETENERSE AQUÍ PRIMERO) -->
+    <section class="section-card" id="familia-sec">
+        <div class="card-content">
+            <span class="badge">Con la bendición de</span>
+            
+            <div class="family-block">
+                <h3>Nuestros Papás:</h3>
+                <p>Jessica Garduza Conde</p>
+                <p>Daniel Ramos Contreras</p>
+            </div>
+
+            <div class="family-block">
+                <h3>Mis Padrinos:</h3>
+                <p>Rosa Conde Sanchez</p>
+                <p>y</p>
+                <p>Marcos Enrique Muñoz Martinez</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FECHA Y UBICACIONES -->
+    <section class="section-card" id="ubicacion-sec">
+        <div class="card-content">
+            <h2 class="date-title">Sábado 28 de Noviembre del 2026</h2>
+
+            <!-- Tarjeta Iglesia -->
+            <div class="location-card">
+                <div class="loc-icon">⛪</div>
+                <h3>CEREMONIA</h3>
+                <p class="time">12:00 PM</p>
+                <p class="place-name">Parroquia Cristo Resucitado Tlaltepango</p>
+                <!-- Link real de la iglesia -->
+                <a href="https://maps.app.goo.gl/Yu4oToUDRGQKhtx99" target="_blank" class="map-btn">Ver ubicación</a>
+            </div>
+
+            <!-- Tarjeta Recepción (AHORA CON ÍCONO DE BANQUETE) -->
+            <div class="location-card">
+                <div class="loc-icon">🍽️</div>
+                <h3>RECEPCIÓN</h3>
+                <p class="time">2:00 PM</p>
+                <p class="place-name">Calle Domingo Arenas 317, El Cristo, Tlax.</p>
+                <!-- Link real del salón / recepción -->
+                <a href="https://maps.app.goo.gl/cA2fwFriRvu6oHjF9" target="_blank" class="map-btn">Ver ubicación</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONFIRMACIÓN -->
+    <section class="section-card">
+        <div class="card-content">
+            <p class="final-msg">Tu presencia hará este día aún más especial...</p>
+            <button id="btn-whatsapp" class="gold-btn btn-confirm">Confirmar asistencia</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
