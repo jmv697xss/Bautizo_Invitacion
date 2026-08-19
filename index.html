@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestra Primera Comunión - Daniel y Angel Said</title>
+    <title>Mi Bautizo y Mi Primera Comunión - Daniel y Angel Said</title>
     <link rel="stylesheet" href="style.css">
     <!-- Fuentes elegantes y sobrias -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
@@ -13,33 +13,88 @@
     <!-- PORTADA DE ENTRADA -->
     <section class="section-card intro-section">
         <div class="frame-border">
-            <p class="symbol">✝︎</p>
-            <h1>Nuestra Primera Comunión</h1>
-            <div class="names-wrapper">
-                <h2 id="typing-text"></h2><span class="cursor">|</span>
+            <p class="symbol">✝︎</p>            
+            <!-- Evento 1: Bautizo -->
+            <div class="event-block">
+                <h1 id="type-title-1"></h1>
+                <div class="names-wrapper">
+                    <h2 id="type-name-1"></h2>
+                </div>
             </div>
-            <p class="subtext">Una fecha sagrada para compartir en familia.</p>
-            <button id="btn-scroll" class="gold-btn">Ver invitación</button>
+            <!-- Evento 2: Primera Comunión -->
+            <div class="event-block">
+                <h1 id="type-title-2"></h1>
+                <div class="names-wrapper">
+                    <h2 id="type-name-2"></h2>
+                </div>
+            </div>
+            <!-- Subtexto -->
+            <p id="type-subtext" class="subtext"></p>
+          <button id="btn-scroll" class="gold-btn btn-hidden">Ver invitación</button>
         </div>
     </section>
 
-    <!-- FAMILIA Y PADRINOS (AHORA TIENE ID PARA DETENERSE AQUÍ PRIMERO) -->
+    <!-- MENSAJES BÍBLICOS Y DEDICATORIAS -->
+    <section class="section-card" id="mensajes-sec">
+        <div class="card-content">
+            <!-- Bloque Bautizo Daniel -->
+            <div class="quote-block">
+                <p class="quote-text">“El que no recibe el Reino de Dios como un niño, no entrará en él.”</p>
+                <p class="quote-author">Marcos 10:15</p>
+                <p class="dedication-text">
+                    Con inmensa alegría y gratitud a Dios,<br>
+                    <strong>Daniel</strong> recibirá el Sacramento del Bautismo,<br>
+                    iniciando un camino de fe bajo su amor y protección.
+                </p>
+            </div>
+            <div class="divider-line">✝︎</div>
+            <!-- Bloque Comunión y Confirmación Angel Said -->
+            <div class="quote-block">
+                <p class="quote-text">“Recibirás la fuerza del Espíritu Santo que vendrá sobre ti, y serás mi testigo.”</p>
+                <p class="quote-author">Hechos 1:8</p>
+                <p class="dedication-text">
+                    Con fe en el corazón y la mirada puesta en Dios,<br>
+                    <strong>Angel Said</strong> se prepara para recibir a Jesús por primera vez<br>
+                    y confirmar su fe mediante el Sacramento de la Confirmación.
+                </p>
+            </div>
+            <p class="invitation-closing">Nos alegrará mucho contar con tu presencia en este día de bendición, amor y esperanza.</p>
+            <!-- Botón para avanzar a la Familia -->
+            <button id="btn-to-family" class="gold-btn">Nuestra Familia</button>
+        </div>
+    </section>
+
+    <!-- FAMILIA Y PADRINOS -->
     <section class="section-card" id="familia-sec">
         <div class="card-content">
             <span class="badge">Con la bendición de</span>
             
-            <div class="family-block">
-                <h3>Nuestros Papás:</h3>
+            <!-- TARJETA PAPÁS (CENTRAL) -->
+            <div class="papas-box">
+                <h3>Nuestros Papás</h3>
                 <p>Jessica Garduza Conde</p>
                 <p>Daniel Ramos Contreras</p>
             </div>
 
-            <div class="family-block">
-                <h3>Mis Padrinos:</h3>
-                <p>Rosa Conde Sanchez</p>
-                <p>y</p>
-                <p>Marcos Enrique Muñoz Martinez</p>
+            <!-- CONTENEDOR PADRINOS LADO A LADO -->
+            <div class="padrinos-grid">
+                <!-- Padrino Daniel -->
+                <div class="padrino-card">
+                    <h3>Padrino de Daniel</h3>
+                    <p>Jesus Manuel Muñoz Conde</p>
+                </div>
+
+                <!-- Padrinos Angel -->
+                <div class="padrino-card">
+                    <h3>Padrinos de Angel</h3>
+                    <p>Marcos Enrique Muñoz Martinez</p>
+                    <p class="y-spacer">y</p>
+                    <p>Rosa Conde Sanchez</p>
+                </div>
             </div>
+
+            <!-- BOTÓN PARA PASAR A UBICACIONES -->
+            <button id="btn-to-location" class="gold-btn">Ver fecha y lugar</button>
         </div>
     </section>
 
@@ -54,27 +109,28 @@
                 <h3>CEREMONIA</h3>
                 <p class="time">12:00 PM</p>
                 <p class="place-name">Parroquia Cristo Resucitado Tlaltepango</p>
-                <!-- Link real de la iglesia -->
-                <a href="https://maps.app.goo.gl/Yu4oToUDRGQKhtx99" target="_blank" class="map-btn">Ver ubicación</a>
+                <a href="https://maps.app.goo.gl/Yu4oToUDRGQKhtx99" target="_blank" rel="noopener noreferrer" class="map-btn">Ver ubicación</a>
             </div>
 
-            <!-- Tarjeta Recepción (AHORA CON ÍCONO DE BANQUETE) -->
+            <!-- Tarjeta Recepción -->
             <div class="location-card">
                 <div class="loc-icon">🍽️</div>
                 <h3>RECEPCIÓN</h3>
                 <p class="time">2:00 PM</p>
                 <p class="place-name">Calle Domingo Arenas 317, El Cristo, Tlax.</p>
-                <!-- Link real del salón / recepción -->
-                <a href="https://maps.app.goo.gl/cA2fwFriRvu6oHjF9" target="_blank" class="map-btn">Ver ubicación</a>
+                <a href="https://maps.app.goo.gl/cA2fwFriRvu6oHjF9" target="_blank" rel="noopener noreferrer" class="map-btn">Ver ubicación</a>
             </div>
+
+            <!-- BOTÓN PARA PASAR A CONFIRMACIÓN -->
+            <button id="btn-to-confirm" class="gold-btn">Confirmar asistencia</button>
         </div>
     </section>
 
     <!-- CONFIRMACIÓN -->
-    <section class="section-card">
+    <section class="section-card" id="confirmacion-sec">
         <div class="card-content">
             <p class="final-msg">Tu presencia hará este día aún más especial...</p>
-            <button id="btn-whatsapp" class="gold-btn btn-confirm">Confirmar asistencia</button>
+            <button id="btn-whatsapp" class="gold-btn btn-confirm">Confirmar por WhatsApp</button>
         </div>
     </section>
 
