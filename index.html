@@ -8,7 +8,10 @@
     <!-- Fuentes elegantes y sobrias -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-<body>
+<audio id="bg-music" loop autoplay>
+    <source src="assents/Music/Piano.mp3" type="audio/mpeg">
+    Tu navegador no soporta el reproductor de audio.
+</audio>
     <!-- PORTADA DE ENTRADA -->
     <section class="section-card intro-section">
         <div class="frame-border">
@@ -29,13 +32,17 @@
             </div>
             <!-- Subtexto -->
             <p id="type-subtext" class="subtext"></p>
-          <button id="btn-scroll" class="gold-btn btn-hidden">Ver invitación</button>
+            <button id="btn-scroll" class="gold-btn btn-hidden">Ver invitación</button>
         </div>
     </section>
-    <!-- MENSAJES BÍBLICOS Y DEDICATORIAS -->
-    <section class="section-card" id="mensajes-sec">
+   <!-- MENSAJES BÍBLICOS Y DEDICATORIAS -->
+<section class="section-card" id="mensajes-sec">
+    <!-- CONTENEDOR CONTENEDOR CON EL MARCO FLORAL EXTERNO -->
+    <div class="main-frame-wrapper">
+        <div class="side-photo-container left-side">
+            <img src="assents/Fhotos/Imagen-Daniel.jpg" alt="Daniel" class="outer-photo">
+        </div>
         <div class="card-content">
-            <!-- Bloque Bautizo Daniel -->
             <div class="quote-block">
                 <p class="quote-text">“El que no recibe el Reino de Dios como un niño, no entrará en él.”</p>
                 <p class="quote-author">Marcos 10:15</p>
@@ -44,9 +51,8 @@
                     <strong>Daniel</strong> recibirá el Sacramento del Bautismo,<br>
                     iniciando un camino de fe bajo su amor y protección.
                 </p>
-            </div>
+            </div>  
             <div class="divider-line">✝︎</div>
-            <!-- Bloque Comunión y Confirmación Angel Said -->
             <div class="quote-block">
                 <p class="quote-text">“Recibirás la fuerza del Espíritu Santo que vendrá sobre ti, y serás mi testigo.”</p>
                 <p class="quote-author">Hechos 1:8</p>
@@ -57,28 +63,31 @@
                 </p>
             </div>
             <p class="invitation-closing">Nos alegrará mucho contar con tu presencia en este día de bendición, amor y esperanza.</p>
-            <!-- Botón para avanzar a la Familia -->
             <button id="btn-to-family" class="gold-btn">Nuestra Familia</button>
         </div>
-    </section>
-    <!-- FAMILIA Y PADRINOS -->
-    <section class="section-card" id="familia-sec">
+        <div class="side-photo-container right-side">
+            <img src="assents/Fhotos/Imagen-Said.jpg" alt="Angel Said" class="outer-photo">
+        </div>
+    </div>
+</section>
+<!-- FAMILIA Y PADRINOS -->
+<section class="section-card" id="familia-sec">
+    <div class="main-frame-wrapper">
+        <div class="side-photo-container left-side">
+            <img src="assents/Fhotos/Imagen-Daniel.jpg" alt="Daniel" class="outer-photo">
+        </div>
         <div class="card-content">
             <span class="badge">Con la bendición de</span>
-            <!-- TARJETA PAPÁS (CENTRAL) -->
             <div class="papas-box">
                 <h3>Nuestros Papás</h3>
                 <p>Jessica Garduza Conde</p>
                 <p>Daniel Ramos Contreras</p>
             </div>
-            <!-- CONTENEDOR PADRINOS LADO A LADO -->
             <div class="padrinos-grid">
-                <!-- Padrino Daniel -->
                 <div class="padrino-card">
                     <h3>Padrino de Daniel</h3>
                     <p>Jesus Manuel Muñoz Conde</p>
                 </div>
-                <!-- Padrinos Angel -->
                 <div class="padrino-card">
                     <h3>Padrinos de Angel</h3>
                     <p>Marcos Enrique Muñoz Martinez</p>
@@ -86,10 +95,15 @@
                     <p>Rosa Conde Sanchez</p>
                 </div>
             </div>
-            <!-- BOTÓN PARA PASAR A UBICACIONES -->
+
             <button id="btn-to-location" class="gold-btn">Ver fecha y lugar</button>
         </div>
-    </section>
+
+        <div class="side-photo-container right-side">
+            <img src="assents/Fhotos/Imagen-Said.jpg" alt="Angel Said" class="outer-photo">
+        </div>
+    </div>
+</section>
     <!-- FECHA Y UBICACIONES -->
     <section class="section-card" id="ubicacion-sec">
         <div class="card-content">
@@ -106,11 +120,10 @@
             <div class="location-card">
                 <div class="loc-icon">🍽️</div>
                 <h3>RECEPCIÓN</h3>
-                <p class="time">2:00 PM</p>
+                <p class="time">5:00 PM</p>
                 <p class="place-name">Calle Domingo Arenas 317, El Cristo, Tlax.</p>
                 <a href="https://maps.app.goo.gl/cA2fwFriRvu6oHjF9" target="_blank" rel="noopener noreferrer" class="map-btn">Ver ubicación</a>
             </div>
-            <!-- BOTÓN PARA PASAR A CONFIRMACIÓN -->
             <button id="btn-to-confirm" class="gold-btn">Confirmar asistencia</button>
         </div>
     </section>
@@ -121,6 +134,9 @@
             <button id="btn-whatsapp" class="gold-btn btn-confirm">Confirmar por WhatsApp</button>
         </div>
     </section>
+<!-- Fuente cursiva para los nombres -->
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Great+Vibes&display=swap" rel="stylesheet">
     <script src="script.js"></script>
 </body>
 </html>
