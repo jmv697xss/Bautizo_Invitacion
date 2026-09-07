@@ -349,3 +349,57 @@ h1 {
 @media (max-width: 768px) {
     .final-msg {
         font-size: 1.7rem;}}
+
+        /* AJUSTES RESPONSIVOS PARA CELULAR */
+@media (max-width: 600px) {
+    /* 1. Fondo fijo para que el marco floral no se deforme al hacer scroll */
+    body {
+        background-attachment: fixed !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        padding: 15px 10px !important;
+    }
+    /* 2. Tarjetas con márgenes razonables para no aplastar el marco */
+    .card-content, .container, section {
+        width: 92% !important;
+        max-width: 380px !important;
+        margin: 15px auto !important;
+        padding: 20px 15px !important;
+        box-sizing: border-box;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+    /* 3. Ajuste de imágenes circulares (imágenes de los niños) */
+    .profile-img, .avatar-img, img[src*="Imagen"] {
+        width: 110px !important;
+        height: 110px !important;
+        object-fit: cover;
+        margin: 0 auto 15px auto !important;
+        display: block;
+    }
+    /* 4. Textos y tipografía legibles */
+    h1, .title {
+        font-size: 1.8rem !important;
+    }
+    h2, .subtitle {
+        font-size: 1.4rem !important;
+    }
+    p, span {
+        font-size: 0.95rem !important;
+        line-height: 1.4 !important;
+    }
+    /* 5. Botones de acción bien alineados */
+    .gold-btn, .btn-confirm, button {
+        width: 100% !important;
+        max-width: 250px !important;
+        padding: 12px 15px !important;
+        font-size: 0.95rem !important;
+        margin: 15px auto 0 auto !important;
+        display: block;
+    }
+    /* Mensaje final */
+    .final-msg {
+        font-size: 1.5rem !important;
+        margin-bottom: 15px !important;
+    }
+}
