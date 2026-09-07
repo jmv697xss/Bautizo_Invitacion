@@ -4,13 +4,20 @@
     --azul-soft: #4a6b82;
     --dorado-sutil: #c5a059;
     --texto: #333333;
-    --borde-marco: #e2d1b0;}
+    --borde-marco: #e2d1b0;
+}
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;}
+    box-sizing: border-box;
+}
+
 html {
-    scroll-behavior: smooth;}
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
 body {
     background-color: var(--bg-crema);
     color: var(--texto);
@@ -19,145 +26,200 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    overflow-x: hidden;}
+    overflow-x: hidden;
+}
+
+/* SECCIÓN PRINCIPAL */
 .section-card {
     min-height: 100vh;
-    min-height: 100dvh;
     width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 60px 40px; /* Espacio para que respire el marco floral */
     position: relative;
-    box-sizing: border-box;
-    /* APLICAR MARCO FLORAL DE FONDO ENMARCANDO LA SECCIÓN COMPLETA */
+    padding: 40px 20px;
     background-image: url("./assents/Fhotos/Marco-Floral.jpg");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: contain; /* Ajusta el marco entero visible en pantalla */}
+    background-size: cover;
+}
+
+/* CONTENEDOR FLEX PARA ELEMENTOS Y FOTOS */
+.main-frame-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+}
+
 /* TARJETA BLANCA DE TEXTO EN EL CENTRO */
 .frame-border, .card-content {
-    background-color: rgba(255, 255, 255, 0.96);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
     border: 2px solid var(--borde-marco);
     border-radius: 16px;
     padding: 35px 25px;
     text-align: center;
     width: 100%;
-    max-width: 480px;
+    max-width: 500px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     position: relative;
-    z-index: 2;}
+    z-index: 2;
+}
+
 /* FOTOS FLOTANTES A LOS LADOS */
 .side-photo-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 5;}
-.left-side {
-    margin-right: 25px;}
-.right-side {
-    margin-left: 25px;}
-/* TAMAÑO DE LAS FOTOS MÁS GRANDES */
+    z-index: 5;
+}
+
 .outer-photo {
-    width: 280px;
-    height: 280px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid var(--dorado-sutil);
     box-shadow: 0 10px 25px rgba(0,0,0,0.18);
-    background-color: #fff;}
-/* EMOJIS DE UBICACIÓN */
+    background-color: #fff;
+}
+
+/* ELEMENTOS DE TEXTO Y TIPOGRAFÍA */
 .loc-icon {
     font-size: 2.2rem;
-    margin-bottom: 6px;}
+    margin-bottom: 6px;
+}
+
 h1 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 2.1rem;
     color: var(--azul-soft);
-    margin-bottom: 10px;}
+    margin-bottom: 10px;
+}
+
 .event-block {
-    margin-bottom: 12px;}
+    margin-bottom: 12px;
+}
+
 .event-block h1 {
     font-size: 1.7rem;
-    margin-bottom: 2px;}
+    margin-bottom: 2px;
+}
+
 .names-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 8px 0;}
+    margin: 8px 0;
+}
+
 #type-name-1, #type-name-2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
+    font-family: 'Alex Brush', cursive;
+    font-size: 2.8rem;
     color: var(--dorado-sutil);
-    font-style: italic;
-    font-weight: 600;}
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
 .subtext {
     font-size: 0.95rem;
     color: #666;
-    margin-top: 10px;}
+    margin-top: 10px;
+}
+
 .badge {
     font-size: 0.85rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--dorado-sutil);
     display: block;
-    margin-bottom: 15px;}
+    margin-bottom: 15px;
+}
+
 .quote-block {
     margin-bottom: 15px;
-    padding: 5px;}
+    padding: 5px;
+}
+
 .quote-text {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.2rem;
     font-style: italic;
     color: var(--azul-soft);
     line-height: 1.4;
-    margin-bottom: 6px;}
+    margin-bottom: 6px;
+}
+
 .quote-author {
     font-size: 0.8rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: var(--dorado-sutil);
     font-weight: 500;
-    margin-bottom: 10px;}
+    margin-bottom: 10px;
+}
+
 .dedication-text {
     font-size: 0.88rem;
     color: #555;
-    line-height: 1.5;}
+    line-height: 1.5;
+}
+
 .dedication-text strong {
-    color: var(--azul-soft);
-    font-weight: 600;}
+    font-family: 'Alex Brush', cursive;
+    font-size: 1.8rem;
+    color: var(--dorado-sutil);
+    font-weight: normal;
+}
+
 .divider-line {
     color: var(--dorado-sutil);
     font-size: 1.2rem;
     margin: 15px 0;
-    opacity: 0.7;}
+    opacity: 0.7;
+}
+
+/* CAJAS Y PADRINOS */
 .papas-box, .location-card {
     background: #ffffff;
     border: 1px solid var(--borde-marco);
     border-radius: 8px;
     padding: 18px 15px;
-    margin-bottom: 15px;}
+    margin-bottom: 15px;
+}
+
 .papas-box h3, .padrino-card h3 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.25rem;
     color: var(--azul-soft);
-    margin-bottom: 6px;}
+    margin-bottom: 6px;
+}
+
 .papas-box p, .padrino-card p {
     font-size: 0.9rem;
     color: #555;
-    line-height: 1.3;}
+    line-height: 1.3;
+}
+
 .y-spacer {
     color: var(--dorado-sutil);
     font-style: italic;
-    margin: 2px 0;}
+    margin: 2px 0;
+}
+
 .padrinos-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     width: 100%;
-    margin-bottom: 15px;}
+    margin-bottom: 15px;
+}
+
 .padrino-card {
     background: #ffffff;
     border: 1px dashed var(--borde-marco);
@@ -167,24 +229,35 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 140px;}
+    min-height: 120px;
+}
+
 .date-title {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.6rem;
     color: var(--azul-soft);
-    margin-bottom: 15px;}
+    margin-bottom: 15px;
+}
+
 .location-card h3 {
     font-size: 0.95rem;
     letter-spacing: 1px;
-    color: var(--azul-soft);}
+    color: var(--azul-soft);
+}
+
 .time {
     font-weight: 500;
     color: var(--dorado-sutil);
-    margin: 4px 0;}
+    margin: 4px 0;
+}
+
 .place-name {
     font-size: 0.88rem;
     margin-bottom: 10px;
-    color: #666;}
+    color: #666;
+}
+
+/* BOTONES */
 .map-btn {
     display: inline-block;
     padding: 8px 20px;
@@ -193,10 +266,14 @@ h1 {
     text-decoration: none;
     border-radius: 20px;
     font-size: 0.85rem;
-    transition: 0.3s;}
+    transition: 0.3s;
+}
+
 .map-btn:hover {
     background: var(--azul-soft);
-    color: white;}
+    color: white;
+}
+
 .gold-btn {
     margin-top: 15px;
     padding: 12px 30px;
@@ -207,87 +284,19 @@ h1 {
     font-size: 0.95rem;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(197, 160, 89, 0.3);
-    transition: transform 0.2s, background-color 0.2s;}
+    transition: transform 0.2s, background-color 0.2s;
+}
+
 .gold-btn:hover {
     transform: scale(1.03);
-    background-color: #b38e4a;}
+    background-color: #b38e4a;
+}
+
 .btn-hidden {
     opacity: 0;
-    pointer-events: none;}
-/* RESPONSIVO PARA PANTALLAS MÓVILES */
-@media (max-width: 950px) {
-    .main-frame-wrapper {
-        flex-direction: column;
-        padding: 40px 20px;}
-    .left-side, .right-side {
-        margin: 15px 0;}
-    .outer-photo {
-        width: 180px;
-        height: 180px;}}
-@media (max-width: 420px) {
-    .padrinos-grid {
-        grid-template-columns: 1fr;}}
-.main-frame-wrapper {
-    display: flex;
-    align-items: stretch; /* Estira todos los elementos hijos al mismo alto */
-    justify-content: center;
-    gap: 20px;
-    position: relative;
-    max-width: 1400px;
-    width: 100%;}
-.side-photo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;}
-.outer-photo {
-    /* Se ajusta proporcionalmente a la altura que le da el flexbox parent */
-    height: 100%;
-    aspect-ratio: 1 / 1; /* Mantiene la forma perfectamente circular */
-    border-radius: 50%;
-    object-fit: cover;
-    border: 6px solid var(--dorado-sutil);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
-    background-color: #fff;}
-.section-card {
-    min-height: 100vh;
-    min-height: 100dvh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    box-sizing: border-box;
-    padding: 20px;
-    /* Abarca TODO el fondo */
-    background-image: url("assents/Fhotos/Marco-Floral.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover; /* Cambiar a COVER para que llene toda la pantalla sin bordes */}
-/* La tarjeta central debe ser semi-translúcida o blanca para legibilidad */
-.card-content {
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(4px); /* Da un toque elegante tipo cristal */
-    border-radius: 16px;
-    padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    max-width: 500px;
-    width: 90%;
-    z-index: 2;}
-@media (max-width: 768px) {
-    .section-card {
-        padding: 15px;
-        /* En cel ajustamos el marco para que las flores queden en las esquinas */
-        background-size: 100% 100%; }
-    .card-content {
-        padding: 20px 15px;
-        width: 95%; /* Maximiza espacio en pantallas pequeñas */}
-    /* Ocultar las tarjetas ovaladas laterales si estorban en cel o pasarlas a vertical */
-    .main-frame-wrapper {
-        flex-direction: column;
-        gap: 20px;}
-    .outer-photo {
-        width: 180px; /* Reducir fotos en cel para que no tapen el marco */
-        height: auto;}}
+    pointer-events: none;
+}
+
 /* BOTÓN FLOTANTE DE MÚSICA */
 .music-btn {
     position: fixed;
@@ -306,100 +315,86 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.2s ease;}
+    transition: transform 0.2s ease;
+}
+
 .music-btn:hover {
-    transform: scale(1.1);}
+    transform: scale(1.1);
+}
+
 .music-btn.playing {
-    animation: pulse-music 2s infinite;}
+    animation: pulse-music 2s infinite;
+}
+
 @keyframes pulse-music {
     0% { box-shadow: 0 0 0 0 rgba(196, 154, 80, 0.7); }
     70% { box-shadow: 0 0 0 14px rgba(196, 154, 80, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(196, 154, 80, 0); }}
-/* NOMBRES PRINCIPALES EN PORTADA */
-#type-name-1, 
-#type-name-2 {
-    font-family: 'Alex Brush', cursive;
-    font-size: 2.8rem; /* Ajusta el tamaño a tu gusto */
-    color: #c49a50;    /* Mantiene el tono dorado */
-    font-weight: normal;
-    letter-spacing: 1px;}
-/* NOMBRES RESALTADOS EN EL TEXTO BÍBLICO/DEDICATORIA */
-.dedication-text strong {
-    font-family: 'Alex Brush', cursive;
-    font-size: 1.8rem;
-    color: #c49a50;
-    font-weight: normal;}
-/* SECCIÓN Y TARJETA FINAL */
+    100% { box-shadow: 0 0 0 0 rgba(196, 154, 80, 0); }
+}
+
+/* SECCIÓN FINAL */
 #confirmacion-sec .card-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 40px 25px;
-    text-align: center;}
+    text-align: center;
+}
+
 .final-msg {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 1.8rem;
-  color: #333333;
+    color: #333333;
     text-align: center;
     margin-bottom: 25px;
     font-weight: 500;
-    letter-spacing: 0.5px;}
-@media (max-width: 768px) {
-    .final-msg {
-        font-size: 1.7rem;}}
+    letter-spacing: 0.5px;
+}
 
-        /* AJUSTES RESPONSIVOS PARA CELULAR */
-@media (max-width: 600px) {
-    /* 1. Fondo fijo para que el marco floral no se deforme al hacer scroll */
-    body {
-        background-attachment: fixed !important;
-        background-size: cover !important;
-        background-position: center center !important;
-        padding: 15px 10px !important;
+/* ==========================================
+   AJUSTES RESPONSIVOS PARA PANTALLAS MÓVILES
+   ========================================== */
+@media (max-width: 768px) {
+    .section-card {
+        padding: 30px 12px;
+        min-height: auto; /* Permite que la pantalla crezca si el texto es largo */
+        background-size: cover;
     }
-    /* 2. Tarjetas con márgenes razonables para no aplastar el marco */
-    .card-content, .container, section {
-        width: 92% !important;
-        max-width: 380px !important;
-        margin: 15px auto !important;
-        padding: 20px 15px !important;
-        box-sizing: border-box;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    .main-frame-wrapper {
+        flex-direction: column;
+        gap: 15px;
     }
-    /* 3. Ajuste de imágenes circulares (imágenes de los niños) */
-    .profile-img, .avatar-img, img[src*="Imagen"] {
-        width: 110px !important;
-        height: 110px !important;
-        object-fit: cover;
-        margin: 0 auto 15px auto !important;
-        display: block;
+
+    .card-content, .frame-border {
+        width: 100%;
+        max-width: 100%;
+        padding: 25px 15px;
     }
-    /* 4. Textos y tipografía legibles */
-    h1, .title {
-        font-size: 1.8rem !important;
+
+    .outer-photo {
+        width: 130px;
+        height: 130px;
     }
-    h2, .subtitle {
-        font-size: 1.4rem !important;
+
+    #type-name-1, #type-name-2 {
+        font-size: 2.3rem;
     }
-    p, span {
-        font-size: 0.95rem !important;
-        line-height: 1.4 !important;
-    }
-    /* 5. Botones de acción bien alineados */
-    .gold-btn, .btn-confirm, button {
-        width: 100% !important;
-        max-width: 250px !important;
-        padding: 12px 15px !important;
-        font-size: 0.95rem !important;
-        margin: 15px auto 0 auto !important;
-        display: block;
-    }
-    /* Mensaje final */
+
     .final-msg {
-        font-size: 1.5rem !important;
-        margin-bottom: 15px !important;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .padrinos-grid {
+        grid-template-columns: 1fr; /* Padrinos en 1 sola columna en cel */
+    }
+
+    .gold-btn {
+        width: 100%;
+        padding: 12px 10px;
     }
 }
