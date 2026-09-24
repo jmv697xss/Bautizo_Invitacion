@@ -27,9 +27,15 @@ body {
     align-items: center;
     width: 100%;
     overflow-x: hidden;
+    /* FONDO GENERAL FIJO */
+    background-image: url("./assents/Fhotos/Marco-Floral.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-/* SECCIÓN PRINCIPAL */
+/* SECCIONES Y CONTENEDOR */
 .section-card {
     min-height: 100vh;
     width: 100%;
@@ -37,14 +43,9 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 40px 20px;
-    background-image: url("./assents/Fhotos/Marco-Floral.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    padding: 40px 15px;
 }
 
-/* CONTENEDOR FLEX PARA ELEMENTOS Y FOTOS */
 .main-frame-wrapper {
     display: flex;
     align-items: center;
@@ -55,40 +56,41 @@ body {
     width: 100%;
 }
 
-/* TARJETA BLANCA DE TEXTO EN EL CENTRO */
+/* TARJETA BLANCA CENTRAL */
 .frame-border, .card-content {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(5px);
     border: 2px solid var(--borde-marco);
     border-radius: 16px;
-    padding: 35px 25px;
+    padding: 30px 20px;
     text-align: center;
     width: 100%;
-    max-width: 500px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    max-width: 480px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
     position: relative;
     z-index: 2;
 }
 
-/* FOTOS FLOTANTES A LOS LADOS */
+/* FOTOS FLOTANTES CIRCULARES */
 .side-photo-container {
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 5;
+    margin: 15px 0;
 }
 
 .outer-photo {
-    width: 220px;
-    height: 220px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid var(--dorado-sutil);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+    border: 4px solid var(--dorado-sutil);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     background-color: #fff;
 }
 
-/* ELEMENTOS DE TEXTO Y TIPOGRAFÍA */
+/* TIPOGRAFÍA Y TEXTOS */
 .loc-icon {
     font-size: 2.2rem;
     margin-bottom: 6px;
@@ -96,7 +98,7 @@ body {
 
 h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2.1rem;
+    font-size: 2rem;
     color: var(--azul-soft);
     margin-bottom: 10px;
 }
@@ -106,7 +108,7 @@ h1 {
 }
 
 .event-block h1 {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     margin-bottom: 2px;
 }
 
@@ -120,14 +122,14 @@ h1 {
 
 #type-name-1, #type-name-2 {
     font-family: 'Alex Brush', cursive;
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     color: var(--dorado-sutil);
     font-weight: normal;
     letter-spacing: 1px;
 }
 
 .subtext {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: #666;
     margin-top: 10px;
 }
@@ -148,7 +150,7 @@ h1 {
 
 .quote-text {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-style: italic;
     color: var(--azul-soft);
     line-height: 1.4;
@@ -172,7 +174,7 @@ h1 {
 
 .dedication-text strong {
     font-family: 'Alex Brush', cursive;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     color: var(--dorado-sutil);
     font-weight: normal;
 }
@@ -189,19 +191,19 @@ h1 {
     background: #ffffff;
     border: 1px solid var(--borde-marco);
     border-radius: 8px;
-    padding: 18px 15px;
+    padding: 16px 12px;
     margin-bottom: 15px;
 }
 
 .papas-box h3, .padrino-card h3 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     color: var(--azul-soft);
     margin-bottom: 6px;
 }
 
 .papas-box p, .padrino-card p {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     color: #555;
     line-height: 1.3;
 }
@@ -224,23 +226,23 @@ h1 {
     background: #ffffff;
     border: 1px dashed var(--borde-marco);
     border-radius: 8px;
-    padding: 14px 8px;
+    padding: 12px 6px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 120px;
+    min-height: 110px;
 }
 
 .date-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: var(--azul-soft);
     margin-bottom: 15px;
 }
 
 .location-card h3 {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     letter-spacing: 1px;
     color: var(--azul-soft);
 }
@@ -252,7 +254,7 @@ h1 {
 }
 
 .place-name {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     margin-bottom: 10px;
     color: #666;
 }
@@ -260,7 +262,7 @@ h1 {
 /* BOTONES */
 .map-btn {
     display: inline-block;
-    padding: 8px 20px;
+    padding: 8px 18px;
     border: 1px solid var(--azul-soft);
     color: var(--azul-soft);
     text-decoration: none;
@@ -276,15 +278,15 @@ h1 {
 
 .gold-btn {
     margin-top: 15px;
-    padding: 12px 30px;
+    padding: 12px 25px;
     background: var(--dorado-sutil);
     color: white;
     border: none;
     border-radius: 25px;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(197, 160, 89, 0.3);
-    transition: transform 0.2s, background-color 0.2s;
+    transition: transform 0.2s;
 }
 
 .gold-btn:hover {
@@ -297,39 +299,24 @@ h1 {
     pointer-events: none;
 }
 
-/* BOTÓN FLOTANTE DE MÚSICA */
+/* BOTÓN FLOTANTE MÚSICA */
 .music-btn {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background-color: #c49a50;
     color: #ffffff;
     border: 2px solid #ffffff;
-    font-size: 22px;
+    font-size: 20px;
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
     z-index: 9999;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.2s ease;
-}
-
-.music-btn:hover {
-    transform: scale(1.1);
-}
-
-.music-btn.playing {
-    animation: pulse-music 2s infinite;
-}
-
-@keyframes pulse-music {
-    0% { box-shadow: 0 0 0 0 rgba(196, 154, 80, 0.7); }
-    70% { box-shadow: 0 0 0 14px rgba(196, 154, 80, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(196, 154, 80, 0); }
 }
 
 /* SECCIÓN FINAL */
@@ -338,63 +325,52 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 40px 25px;
-    text-align: center;
+    padding: 35px 20px;
 }
 
 .final-msg {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #333333;
-    text-align: center;
-    margin-bottom: 25px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
+    margin-bottom: 20px;
 }
 
 /* ==========================================
-   AJUSTES RESPONSIVOS PARA PANTALLAS MÓVILES
+   AJUSTES MÓVILES EXCLUSIVOS (RESPONSIVO)
    ========================================== */
 @media (max-width: 768px) {
+    body {
+        /* Desactiva 'fixed' solo en movil para evitar bugs de render en navegadores de celular */
+        background-attachment: scroll;
+    }
+
     .section-card {
-        padding: 30px 12px;
-        min-height: auto; /* Permite que la pantalla crezca si el texto es largo */
-        background-size: cover;
+        padding: 20px 10px;
+        min-height: auto; 
     }
 
     .main-frame-wrapper {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
     }
 
     .card-content, .frame-border {
         width: 100%;
         max-width: 100%;
-        padding: 25px 15px;
+        padding: 20px 12px;
     }
 
     .outer-photo {
-        width: 130px;
-        height: 130px;
+        width: 120px;
+        height: 120px;
     }
 
     #type-name-1, #type-name-2 {
-        font-size: 2.3rem;
+        font-size: 2.2rem;
     }
 
-    .final-msg {
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
     .padrinos-grid {
-        grid-template-columns: 1fr; /* Padrinos en 1 sola columna en cel */
-    }
-
-    .gold-btn {
-        width: 100%;
-        padding: 12px 10px;
+        grid-template-columns: 1fr;
     }
 }
