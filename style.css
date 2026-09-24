@@ -1,400 +1,76 @@
-:root {
-    --bg-crema: #faf8f5;
-    --card-bg: #ffffff;
-    --azul-soft: #4a6b82;
-    --dorado-sutil: #c5a059;
-    --texto: #333333;
-    --borde-marco: #e2d1b0;
-}
-
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-    width: 100%;
-}
-
 body {
-    background-color: var(--bg-crema);
-    color: var(--texto);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #fdfbf7;
+    color: #333;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    overflow-x: hidden;
-    /* FONDO GENERAL FIJO */
-    background-image: url("./assents/Fhotos/Marco-Floral.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-/* SECCIONES Y CONTENEDOR */
-.section-card {
+    justify-content: center;
     min-height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 40px 15px;
+    padding: 15px;
 }
 
-.main-frame-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    max-width: 550px;
+/* Tarjetas principales */
+.card, section, .container {
     width: 100%;
-}
-
-/* TARJETA BLANCA CENTRAL */
-.frame-border, .card-content {
-    background: rgba(255, 255, 255, 0.94);
-    backdrop-filter: blur(5px);
-    border: 2px solid var(--borde-marco);
-    border-radius: 16px;
-    padding: 30px 20px;
+    max-width: 450px; /* Tamaño ideal para pantalla de celular */
+    background: #ffffff;
+    border: 1px solid #e2d1b3;
+    border-radius: 15px;
+    padding: 25px 20px;
+    margin: 15px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     text-align: center;
-    width: 100%;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    position: relative;
-    z-index: 2;
 }
 
-/* FILA DE FOTOS CIRCULARES DENTRO DE LA TARJETA */
-.photo-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 20px;
+/* Contenedor de fotos de los niños */
+.photos-container, .children-photos, .photo-row {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 20px !important;
+    margin: 15px 0 !important;
     width: 100%;
 }
 
-.side-photo-container {
+.photo-item, .child-profile {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
-.outer-photo {
-    width: 110px;
-    height: 110px;
+.photo-item img, .child-profile img {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid var(--dorado-sutil);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
-    background-color: #fff;
+    border: 2px solid #c5a059;
+    padding: 3px;
 }
 
-.photo-label {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1rem;
-    color: var(--azul-soft);
-    margin-top: 6px;
-    font-weight: 600;
-}
-
-/* TIPOGRAFÍA Y TEXTOS */
-.symbol {
-    font-size: 1.8rem;
-    color: var(--dorado-sutil);
-    margin-bottom: 10px;
-}
-
-.loc-icon {
-    font-size: 2.2rem;
-    margin-bottom: 6px;
-}
-
-h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
-    color: var(--azul-soft);
-    margin-bottom: 8px;
-}
-
-.event-block {
-    margin-bottom: 12px;
-}
-
-.event-block h1 {
-    font-size: 1.4rem;
-    margin-bottom: 2px;
-}
-
-.names-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 4px 0;
-}
-
-#type-name-1, #type-name-2 {
-    font-family: 'Alex Brush', cursive;
-    font-size: 2.4rem;
-    color: var(--dorado-sutil);
-    font-weight: normal;
-    letter-spacing: 1px;
-}
-
-.subtext {
-    font-size: 0.9rem;
-    color: #666;
-    margin-top: 10px;
-}
-
-.badge {
-    font-size: 0.85rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--dorado-sutil);
-    display: block;
-    margin-bottom: 15px;
-}
-
-.quote-block {
-    margin-bottom: 15px;
-    padding: 5px;
-}
-
-.quote-text {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    font-style: italic;
-    color: var(--azul-soft);
-    line-height: 1.4;
-    margin-bottom: 6px;
-}
-
-.quote-author {
-    font-size: 0.8rem;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--dorado-sutil);
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-.dedication-text {
-    font-size: 0.88rem;
-    color: #555;
-    line-height: 1.5;
-}
-
-.dedication-text strong {
-    font-family: 'Alex Brush', cursive;
-    font-size: 1.6rem;
-    color: var(--dorado-sutil);
-    font-weight: normal;
-}
-
-.invitation-closing {
-    font-size: 0.9rem;
-    color: #444;
-    margin: 15px 0 5px 0;
-    font-style: italic;
-}
-
-.divider-line {
-    color: var(--dorado-sutil);
-    font-size: 1.2rem;
-    margin: 15px 0;
-    opacity: 0.7;
-}
-
-/* CAJAS Y PADRINOS */
-.papas-box, .location-card {
-    background: #ffffff;
-    border: 1px solid var(--borde-marco);
-    border-radius: 8px;
-    padding: 16px 12px;
-    margin-bottom: 15px;
-}
-
-.papas-box h3, .padrino-card h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
-    color: var(--azul-soft);
-    margin-bottom: 6px;
-}
-
-.papas-box p, .padrino-card p {
-    font-size: 0.88rem;
-    color: #555;
-    line-height: 1.3;
-}
-
-.y-spacer {
-    color: var(--dorado-sutil);
-    font-style: italic;
-    margin: 2px 0;
-}
-
-.padrinos-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-.padrino-card {
-    background: #ffffff;
-    border: 1px dashed var(--borde-marco);
-    border-radius: 8px;
-    padding: 12px 6px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 110px;
-}
-
-.date-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
-    color: var(--azul-soft);
-    margin-bottom: 15px;
-}
-
-.location-card h3 {
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    color: var(--azul-soft);
-}
-
-.time {
-    font-weight: 500;
-    color: var(--dorado-sutil);
-    margin: 4px 0;
-}
-
-.place-name {
-    font-size: 0.85rem;
-    margin-bottom: 10px;
-    color: #666;
-}
-
-/* BOTONES */
-.map-btn {
-    display: inline-block;
-    padding: 8px 18px;
-    border: 1px solid var(--azul-soft);
-    color: var(--azul-soft);
-    text-decoration: none;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    transition: 0.3s;
-}
-
-.map-btn:hover {
-    background: var(--azul-soft);
-    color: white;
-}
-
-.gold-btn {
-    margin-top: 15px;
-    padding: 12px 25px;
-    background: var(--dorado-sutil);
-    color: white;
-    border: none;
-    border-radius: 25px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(197, 160, 89, 0.3);
-    transition: transform 0.2s, opacity 0.3s;
-}
-
-.gold-btn:hover {
-    transform: scale(1.03);
-    background-color: #b38e4a;
-}
-
-.btn-hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-/* BOTÓN FLOTANTE MÚSICA */
-.music-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background-color: #c49a50;
+/* Botones dorados */
+.gold-btn, button, .btn {
+    background: linear-gradient(135deg, #c5a059, #a37f3e);
     color: #ffffff;
-    border: 2px solid #ffffff;
-    font-size: 20px;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 0.95rem;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    transition: transform 0.2s, background 0.3s;
 }
 
-/* SECCIÓN FINAL */
-#confirmacion-sec .card-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 35px 20px;
-}
-
-.final-msg {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 1.5rem;
-    color: #333333;
-    margin-bottom: 20px;
-}
-
-/* ==========================================
-   AJUSTES MÓVILES EXCLUSIVOS (RESPONSIVO)
-   ========================================== */
-@media (max-width: 768px) {
-    body {
-        background-attachment: scroll;
-    }
-
-    .section-card {
-        padding: 20px 10px;
-        min-height: auto;
-    }
-
-    .card-content, .frame-border {
-        padding: 20px 12px;
-    }
-
-    .outer-photo {
-        width: 90px;
-        height: 90px;
-    }
-
-    .photo-row {
-        gap: 15px;
-        margin-bottom: 15px;
-    }
-
-    #type-name-1, #type-name-2 {
-        font-size: 2rem;
-    }
-
-    .padrinos-grid {
-        grid-template-columns: 1fr;
-    }
+.gold-btn:active {
+    transform: scale(0.98);
 }
