@@ -1,6 +1,6 @@
 :root {
     --bg-crema: #faf8f5;
-    --card-bg: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.96);
     --azul-soft: #4a6b82;
     --dorado-sutil: #c5a059;
     --texto: #333333;
@@ -27,12 +27,13 @@ body {
     align-items: center;
     width: 100%;
     overflow-x: hidden;
-    /* Fondo floral ajustado para que se vea en todas partes sin deformarse */
+    
+    /* FONDO FIJO: El marco no se repite, se queda congelado en la pantalla */
     background-image: url("./assents/Fhotos/Marco-Floral.jpg");
-    background-repeat: repeat;
-    background-position: top center;
-    background-size: 100% auto;
-    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /* SECCIONES Y CONTENEDOR */
@@ -43,7 +44,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 30px 12px;
+    padding: 40px 20px;
 }
 
 .main-frame-wrapper {
@@ -51,20 +52,20 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    max-width: 500px;
+    max-width: 420px;
     width: 100%;
 }
 
 /* TARJETA BLANCA CENTRAL */
 .frame-border, .card-content {
-    background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(5px);
+    background: var(--card-bg);
+    backdrop-filter: blur(4px);
     border: 2px solid var(--borde-marco);
     border-radius: 16px;
-    padding: 25px 15px;
+    padding: 25px 18px;
     text-align: center;
     width: 100%;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
     position: relative;
     z-index: 2;
 }
@@ -81,10 +82,10 @@ body {
 }
 
 .outer-photo, .side-photo-container img {
-    width: 90px !important;
-    height: 90px !important;
-    max-width: 90px !important;
-    max-height: 90px !important;
+    width: 85px !important;
+    height: 85px !important;
+    max-width: 85px !important;
+    max-height: 85px !important;
     border-radius: 50% !important;
     object-fit: cover !important;
     border: 3px solid var(--dorado-sutil) !important;
@@ -93,7 +94,7 @@ body {
     display: inline-block;
 }
 
-/* TIPOGRAFÍA ELEGANTE (Adiós estilo reporte escolar) */
+/* TIPOGRAFÍA Y TÍTULOS */
 h1, h2, h3, .date-title, .location-card h3, .papas-box h3, .padrino-card h3, .event-block h1 {
     font-family: 'Cormorant Garamond', serif !important;
     letter-spacing: 1px;
@@ -158,7 +159,7 @@ h1 {
 }
 
 .quote-text {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-style: italic;
     color: var(--azul-soft);
     line-height: 1.4;
